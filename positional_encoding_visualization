@@ -1,0 +1,31 @@
+%%positional encoding first 3 element vector
+
+t=(0:0.01:2*pi);
+y0=8+sin(1/(1)*t);
+y1=5+cos(1/(1.018)*t);
+y2=2+sin(1/(1.03)*t);
+plot(t,y0,'b','LineWidth',2)
+hold on;
+plot(t,y1,'r','LineWidth',2)
+hold on;
+plot(t,y2,'g','LineWidth',2)
+set(gca,'ytick',[])
+xlabel('word position')
+ylabel('positional embedding first 3 row')
+legend('sin(2\pit)','cos(2.036\pit)','sin(2.06\pit)')
+axis([0 2*pi 0 10])
+
+
+%%positional encoding last 2 element vector
+
+t=(0:0.01:2*pi*10000);
+y510=5+sin(1/(9646.61)*t);
+y511=2+cos(1/(9821.71)*t);
+plot(t,y510,'r','LineWidth',2)
+hold on;
+plot(t,y511,'b','LineWidth',2)
+set(gca,'ytick',[])
+xlabel('word position')
+ylabel('positional embedding last 2 row')
+legend('sin(19292\pit)','cos(19642\pit)')
+axis([0 2*pi*10000 0 7])
